@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimalShelter.Migrations
 {
     [DbContext(typeof(AnimalShelterContext))]
-    [Migration("20210614140905_Initial")]
+    [Migration("20210614145156_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,6 +52,46 @@ namespace AnimalShelter.Migrations
                             Gender = "Test Gender",
                             Name = "Test Name",
                             Species = "Test Species"
+                        },
+                        new
+                        {
+                            AnimalId = 2,
+                            Age = 12,
+                            Gender = "Female",
+                            Name = "Vivian",
+                            Species = "Cat"
+                        },
+                        new
+                        {
+                            AnimalId = 3,
+                            Age = 4,
+                            Gender = "Female",
+                            Name = "Claire",
+                            Species = "Dog"
+                        },
+                        new
+                        {
+                            AnimalId = 4,
+                            Age = 1,
+                            Gender = "Male",
+                            Name = "Marshal",
+                            Species = "Cat"
+                        },
+                        new
+                        {
+                            AnimalId = 5,
+                            Age = 1,
+                            Gender = "Female",
+                            Name = "Bob",
+                            Species = "Chicken"
+                        },
+                        new
+                        {
+                            AnimalId = 6,
+                            Age = 1,
+                            Gender = "Female",
+                            Name = "Not Bob",
+                            Species = "Chicken"
                         });
                 });
 #pragma warning restore 612, 618

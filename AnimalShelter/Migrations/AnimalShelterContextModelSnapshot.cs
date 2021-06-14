@@ -63,7 +63,7 @@ namespace AnimalShelter.Migrations
                         {
                             AnimalId = 3,
                             Age = 4,
-                            Gender = "Female Gender",
+                            Gender = "Female",
                             Name = "Claire",
                             Species = "Dog"
                         },

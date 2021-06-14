@@ -26,7 +26,15 @@ namespace AnimalShelter.Migrations
             migrationBuilder.InsertData(
                 table: "Animals",
                 columns: new[] { "AnimalId", "Age", "Gender", "Name", "Species" },
-                values: new object[] { 1, 1, "Test Gender", "Test Name", "Test Species" });
+                values: new object[,]
+                {
+                    { 1, 1, "Test Gender", "Test Name", "Test Species" },
+                    { 2, 12, "Female", "Vivian", "Cat" },
+                    { 3, 4, "Female", "Claire", "Dog" },
+                    { 4, 1, "Male", "Marshal", "Cat" },
+                    { 5, 1, "Female", "Bob", "Chicken" },
+                    { 6, 1, "Female", "Not Bob", "Chicken" }
+                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
