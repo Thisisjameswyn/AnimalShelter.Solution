@@ -57,7 +57,9 @@ namespace AnimalShelter.Controllers
       Random rnd = new Random();
       var animaldb = await _db.Animals.ToListAsync();
       int r = rnd.Next(animaldb.Count);
-      if (animaldb == null)
+      var animal = await _db.Animals.FindAsync(r);
+      Console.WriteLine(r);
+      if (!AnimalExists(r))
       {
         return NotFound();
       }
