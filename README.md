@@ -67,6 +67,8 @@ POST /api/animals
 GET /api/animals/{id}
 PUT /api/animals/{id}
 DELETE /api/animals/{id}
+
+Random animal /api/animals/random
 ```
 #### Sample Request URL
 Using animal ID
