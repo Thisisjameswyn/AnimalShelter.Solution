@@ -51,6 +51,19 @@ namespace AnimalShelter.Controllers
       return animal;
     }
 
+    [HttpGet("random")]
+    public async Task<ActionResult<Animal>> GetRandomAnimal()
+    {
+      Random rnd = new Random();
+      var animaldb = await _db.Animals.ToListAsync();
+      int r = rnd.Next(animaldb.Count);
+      if (animaldb == null)
+      {
+        return NotFound();
+      }
+      return animal;
+    }
+
     [HttpPut("{id}")]
     public async Task<IActionResult> Put(int id, Animal animal)
     {
